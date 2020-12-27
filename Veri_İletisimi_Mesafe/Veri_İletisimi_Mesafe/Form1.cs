@@ -54,17 +54,16 @@ namespace Veri_İletisimi_Mesafe
         private void timer1_Tick(object sender, EventArgs e)
         {
             gelen = serialPort1.ReadLine();
-          zaman = (zaman + 1);
+            zaman = (zaman + 1);
             satir = dataGridView1.Rows.Add();
 
             dataGridView1.Rows[satir].Cells[0].Value = satirNo;
             dataGridView1.Rows[satir].Cells[1].Value = gelen; //ölçüm
-
             dataGridView1.Rows[satir].Cells[2].Value = yeni.ToLongTimeString(); //saat bilgisi
             dataGridView1.Rows[satir].Cells[3].Value = yeni.ToShortDateString(); //tarih bilgisi
             satir++;
             satirNo++;
-                label1.Text = gelen;
+            label1.Text = gelen;
         }
 
         private void btn_kayıt_Click(object sender, EventArgs e)
@@ -99,22 +98,15 @@ namespace Veri_İletisimi_Mesafe
         {
             dataGridView2.Visible = true;
             label2.Visible = true;
-
-
             SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-1SLQI3BT\OZLEM;Initial Catalog=veri_iletsi;Integrated Security=True");
             SqlDataAdapter da = new SqlDataAdapter("select*from mesafe", con);
             DataSet ds = new DataSet();
-
-
             con.Open();
             da.Fill(ds, "mesafe");
             dataGridView2.DataSource = ds.Tables["mesafe"];
             con.Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
