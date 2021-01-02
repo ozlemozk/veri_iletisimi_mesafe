@@ -46,10 +46,7 @@ namespace Veri_İletisimi_Mesafe
         }
 
         private void btn_sil_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
-
-        }
+        { dataGridView1.Rows.Clear(); }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -105,8 +102,4 @@ namespace Veri_İletisimi_Mesafe
             da.Fill(ds, "mesafe");
             dataGridView2.DataSource = ds.Tables["mesafe"];
             con.Close();
-        }
-
-       
-    }
-}
+        } } }
