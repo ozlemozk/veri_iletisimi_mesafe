@@ -93,6 +93,7 @@ namespace Veri_İletisimi_Mesafe
 
         private void btn_gös_Click(object sender, EventArgs e)
         {
+        /*veri tabanı kayıtları gösterme işlemi datagirde 2.olanda*/
             dataGridView2.Visible = true;
             label2.Visible = true;
             SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-1SLQI3BT\OZLEM;Initial Catalog=veri_iletsi;Integrated Security=True");
