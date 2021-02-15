@@ -1,7 +1,7 @@
 #include <Wire.h> /*bağlantı fonksiyonlarını bulundurur.*/
 #include <LiquidCrystal_I2C.h>  /*LCD ekran çalışma ve bağlantısı*/
 LiquidCrystal_I2C lcd(0x27, 16, 2); /* lcd nin adresini ve kaca kac lcd olduguu tanımladık*/
-
+LiquidCrystal_I2C lcd(0x27, 16, 2);/**/
 
 const int trig = 3;   /* Sensorun trig pini Arduinonun 3 numaralı ayağına bağlandı */
 const int echo = 4; /* Sensorun echo pini Arduinonun 4 numaralı ayağına bağlandı */
@@ -39,8 +39,6 @@ void loop() /*Arduino'nun yapması gereken işlemler buraya yazılır*/
     }
  
  
-
-
 mesafedegeri=mesafeolc();
 lcdyaz(mesafedegeri,btgelenveri);
 
@@ -52,8 +50,6 @@ Serial.println(mesafedegeri);//tek veri için
  
 }
 //gelen verilere göre  kontrol yapıyor ve uygulama ile burada uggulamadaki harf sistemini asci tablouna göre yapıldı
-
-
 void lcdyaz(int mesafeverisi,int bluetoothveri){
 
   //Serial.println(bluetoothveri);
@@ -76,8 +72,6 @@ void lcdyaz(int mesafeverisi,int bluetoothveri){
     lcd.setCursor(7,1);
     lcd.print(mesafeverisi);
  }
- 
-
 }
 
 int mesafeolc(){
