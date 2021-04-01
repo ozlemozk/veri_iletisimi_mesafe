@@ -83,7 +83,9 @@ namespace Veri_İletisimi_Mesafe
                         cmd.Parameters["@tarih"].Value = row.Cells[3].Value;
                         con.Open();
 
-                        cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
+
+
                         con.Close();
                     }
                 }
@@ -101,6 +103,7 @@ namespace Veri_İletisimi_Mesafe
             DataSet ds = new DataSet();
             con.Open();
             da.Fill(ds, "mesafe");
-            dataGridView2.DataSource = ds.Tables["mesafe"];
-            con.Close();
+            dataGridView2.DataSource = ds.Tables["mesafe"]; //isimler
+            
+            con.Close();     
         } } }
