@@ -171,4 +171,48 @@
             this.dataGridView1.TabIndex = 31;
          
             
-            ***/*/*/*/*/*/*/*/*/
+         // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(830, 597);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btn_gös);
+            this.Controls.Add(this.btn_kayıt);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_sil);
+            this.Controls.Add(this.btn_basla);
+            this.Controls.Add(this.btn_dur);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_gös;
+        private System.Windows.Forms.Button btn_kayıt;
+        private System.Windows.Forms.Label label1;
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btn_sil;
+        private System.Windows.Forms.Button btn_basla;
+        private System.Windows.Forms.Button btn_dur;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+    }
+}
